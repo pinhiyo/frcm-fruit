@@ -1,5 +1,5 @@
 import { defineConfig } from 'vite';
 
 export default defineConfig({
-    base: './', // Use relative paths for assets so GitHub pages works
+    base: '/frcm-fruit/', // ここを './' から '/frcm-fruit/' に変更しました
 });
