@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Frekama Fruits</title>
+  <link rel="stylesheet" href="./src/style.css" />
+</head>
+
+<body>
+  <div id="game-container">
+    <!-- Background Patterns -->
+    <div id="bg-pattern"></div>
+    
+    <!-- Title Screen -->
+    <div id="title-screen" class="overlay-screen">
+      <button id="start-btn" class="logo-btn">
+        <img src="./logo.png" alt="Frekama Fruits" id="main-logo" />
+      </button>
+      <div class="title-footer">
+        <button id="title-sound-toggle" class="sound-btn-large">サウンド: ON 🔊</button>
+      </div>
+    </div>
+
+    <!-- UI Layer -->
+    <div id="ui-layer" class="hidden">
+      <div class="score-card">
+        <div class="card-title">SCORE</div>
+        <div id="score">0</div>
+        <div id="best-score-wrapper">
+          <span id="best-score-label">BEST</span>
+          <div id="best-score">0</div>
+        </div>
+      </div>
+      
+      <div id="center-ui">
+        <div class="sound-row">
+          <button id="sound-toggle" class="sound-btn">🔊</button>
+          <div id="volume-control">
+            <input type="range" id="volume-slider" min="0" max="1" step="0.1" value="0.5">
+          </div>
+        </div>
+        <img src="./cheer_chars.png" id="cheer-img" alt="Cheer Characters" />
+      </div>
+
+      <div class="next-card">
+        <div class="card-title">NEXT</div>
+        <div id="next-fruit-display"></div>
+      </div>
+    </div>
+    
+    <!-- Evolution Chart -->
+    <div id="evolution-chart" class="hidden"></div>
+
+
+
+
+    <div id="canvas-container"></div>
+
+    <!-- Modals -->
+    <div id="game-over-screen" class="hidden overlay-screen">
+      <img src="./gameover.png" class="modal-char" />
+      <h1 id="end-title">Game Over!</h1>
+      <div class="result-box">
+        <p>スコア: <span id="final-score">0</span></p>
+      </div>
+      <p id="end-reason"></p>
+      <div class="modal-buttons">
+        <button id="restart-btn">リトライ</button>
+        <button id="to-title-btn">タイトルへ</button>
+      </div>
+    </div>
+
+  </div>
+  <script type="module" src="./src/main.js"></script>
+</body>
+
+</html>
