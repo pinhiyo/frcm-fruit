@@ -385,6 +385,17 @@ button:active {
   box-shadow: 0 2px 0 #87ceeb;
 }
 
+#share-btn {
+  background: #1DA1F2; /* Twitter/X Blue */
+  box-shadow: 0 6px 0 #0d8bd9;
+  font-size: 1.3rem;
+  padding: 12px 30px;
+}
+
+#share-btn:active {
+  box-shadow: 0 2px 0 #0d8bd9;
+}
+
 
 /* Evolution Chart */
 #evolution-chart {

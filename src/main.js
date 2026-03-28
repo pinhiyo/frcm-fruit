@@ -51,6 +51,7 @@ const startBtn = document.getElementById('start-btn');
 const restartBtn = document.getElementById('restart-btn');
 const toTitleBtn = document.getElementById('to-title-btn');
 const soundToggleBtn = document.getElementById('sound-toggle');
+const shareBtn = document.getElementById('share-btn');
 
 // Initialize best score display
 if (bestScoreEl) bestScoreEl.textContent = bestScore;
@@ -543,7 +544,18 @@ toTitleBtn.addEventListener('click', () => {
   titleScreen.classList.remove('hidden');
 });
 
+shareBtn.addEventListener('click', () => {
+  const text = `フレカマ・フルーツでハイスコア ${bestScore} 点を出したよ！ 🍎🍉`;
+  const url = 'https://pinhiyo.github.io/frcm-fruit/';
+  const twitterUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}`;
+  window.open(twitterUrl, '_blank');
+});
+
 const resetBoard = () => {
+  // Reset score
+  currentScore = 0;
+  if (scoreEl) scoreEl.textContent = '0';
+
   Composite.clear(engine.world, false);
   walls = createWalls();
   Composite.add(engine.world, walls);
@@ -567,8 +579,6 @@ const resetBoard = () => {
 };
 
 restartBtn.addEventListener('click', () => {
-  currentScore = 0;
-  scoreEl.textContent = '0';
   gameOverScreen.classList.add('hidden');
   resetBoard();
 });
