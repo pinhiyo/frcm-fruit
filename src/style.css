@@ -387,6 +387,7 @@ button:active {
 
 #share-btn {
   background: #1DA1F2; /* Twitter/X Blue */
+  color: white; /* Made white for better visibility */
   box-shadow: 0 4px 0 #0d8bd9;
   font-size: 1.1rem;
   padding: 10px 25px;
