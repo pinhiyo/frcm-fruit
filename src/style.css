@@ -144,7 +144,7 @@ body {
 }
 
 #score {
-  font-size: 2.8rem; /* Larger score */
+  font-size: 2.0rem; /* Reduced to fit 5+ digits */
   font-weight: 800;
   color: var(--score-color);
   line-height: 1;
